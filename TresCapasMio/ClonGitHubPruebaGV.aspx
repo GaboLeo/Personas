@@ -11,8 +11,8 @@
 <div class="container">
         <div class="panel panel-primary">
             <div class="panel-heading">
-            </div>
-            <div class="panel-body">
+           <%-- </div>
+            <div class="panel-body">--%>
                 <div style="overflow: scroll; height: 300px;">
                     <asp:GridView ID="gvPersonas" runat="server" AutoGenerateColumns="False" ShowFooter="True"
                         DataKeyNames="Id,SexoId" OnRowCancelingEdit="gvPersonas_RowCancelingEdit" OnRowDeleting="gvPersonas_RowDeleting"
