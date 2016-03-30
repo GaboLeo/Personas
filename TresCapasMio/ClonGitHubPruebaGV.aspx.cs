@@ -19,7 +19,6 @@ public partial class ClonGitHubPruebaGV : System.Web.UI.Page
         catch (Exception ex)
         {
             Title = ex.Message;
-
         }
     }
     private void CargarGVPersonas()
@@ -49,7 +48,6 @@ public partial class ClonGitHubPruebaGV : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-
             string cadena = "Error";
             MostrarMensaje(cadena + " " + ex);
         }
@@ -60,13 +58,11 @@ public partial class ClonGitHubPruebaGV : System.Web.UI.Page
         {
             gvPersonas.EditIndex = -1;
             CargarGVPersonas();
-
         }
         catch (Exception ex)
         {
             string cadena = "Error";
             MostrarMensaje(cadena + " " + ex);
-
         }
     }
     protected void gvPersonas_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -83,14 +79,11 @@ public partial class ClonGitHubPruebaGV : System.Web.UI.Page
             per.Sueldo = Convert.ToDouble(((TextBox)gvPersonas.Rows[e.RowIndex].FindControl("txtSueldoEIT")).Text);
             per.SexoId = Convert.ToInt32(((DropDownList)gvPersonas.Rows[e.RowIndex].FindControl("ddlSexoEIT")).SelectedValue);
             per.Estatus = Convert.ToBoolean(((CheckBox)gvPersonas.Rows[e.RowIndex].FindControl("chkEstatusEIT")).Checked);
-
             new BusPersona().Actualizar(per);
             Response.Redirect(Request.CurrentExecutionFilePath);
-
         }
         catch (Exception ex)
         {
-
             string cadena = "Error";
             MostrarMensaje(cadena + " " + ex);
         }
@@ -106,7 +99,6 @@ public partial class ClonGitHubPruebaGV : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-
             string cadena = "Error";
             MostrarMensaje(cadena + " " + ex);
         }
@@ -130,14 +122,11 @@ public partial class ClonGitHubPruebaGV : System.Web.UI.Page
             per.Sueldo = Convert.ToDouble(((TextBox)gvPersonas.FooterRow.FindControl("txtSueldoFT")).Text);
             per.SexoId = Convert.ToInt32(((DropDownList)gvPersonas.FooterRow.FindControl("ddlSexoFT")).SelectedValue);
             per.Estatus = Convert.ToBoolean(((CheckBox)gvPersonas.FooterRow.FindControl("chkEstatusFT")).Checked);
-
             new BusPersona().agregar(per);
             Response.Redirect(Request.CurrentExecutionFilePath);
-
         }
         catch (Exception ex)
         {
-
             string cadena = "Error";
             MostrarMensaje(cadena + " " + ex);
         }
