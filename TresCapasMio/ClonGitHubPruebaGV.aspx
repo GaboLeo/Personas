@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.master" AutoEventWireup="true" CodeFile="ClonGitHubPruebaGV.aspx.cs" Inherits="ClonGitHubPruebaGV" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="css/bootstrap-datepicker.standalone.css" rel="stylesheet" />
+    <link href="css/bootstrap-datepicker3.css" rel="stylesheet" />
+    <link href="css/bootstrap-datepicker3.standalone.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <div class="container">
@@ -143,5 +148,9 @@
             </div>
         </div>
     </div>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/moment-with-locales.js"></script>
 </asp:Content>
 
