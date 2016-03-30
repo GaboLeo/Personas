@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TresCapasMio", "TresCapasMio\", "{74FE71B3-7460-4B4A-A75E-9AA15A7FA041}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{CE6D8922-B04C-4CD3-AC15-87BD2B97E1DB}|BusPersonas.dll;{3D524797-2ACE-4443-AA54-C0D1A66A57C3}|DatPersonas.dll;{74A9AD16-269C-4856-89B3-BC9B7026D6FE}|EntPersonas.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/TresCapasMio"
+		Debug.AspNetCompiler.PhysicalPath = "TresCapasMio\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\TresCapasMio\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/TresCapasMio"
+		Release.AspNetCompiler.PhysicalPath = "TresCapasMio\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\TresCapasMio\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "14015"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 UI", "1 UI", "{D8695689-CDC8-4D44-82AD-CCF9B96BD827}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Business", "2 Business", "{4F18D066-03EB-4B08-BD3B-CC675E65A974}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Data", "3 Data", "{86F0F61F-E264-42CC-8F0F-CE35F37F6DAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatPersonas", "DatPersonas\DatPersonas.csproj", "{3D524797-2ACE-4443-AA54-C0D1A66A57C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusPersonas", "BusPersonas\BusPersonas.csproj", "{CE6D8922-B04C-4CD3-AC15-87BD2B97E1DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntPersonas", "EntPersonas\EntPersonas.csproj", "{74A9AD16-269C-4856-89B3-BC9B7026D6FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74FE71B3-7460-4B4A-A75E-9AA15A7FA041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74FE71B3-7460-4B4A-A75E-9AA15A7FA041}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74FE71B3-7460-4B4A-A75E-9AA15A7FA041}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{74FE71B3-7460-4B4A-A75E-9AA15A7FA041}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3D524797-2ACE-4443-AA54-C0D1A66A57C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D524797-2ACE-4443-AA54-C0D1A66A57C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D524797-2ACE-4443-AA54-C0D1A66A57C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D524797-2ACE-4443-AA54-C0D1A66A57C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE6D8922-B04C-4CD3-AC15-87BD2B97E1DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE6D8922-B04C-4CD3-AC15-87BD2B97E1DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE6D8922-B04C-4CD3-AC15-87BD2B97E1DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE6D8922-B04C-4CD3-AC15-87BD2B97E1DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74A9AD16-269C-4856-89B3-BC9B7026D6FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74A9AD16-269C-4856-89B3-BC9B7026D6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74A9AD16-269C-4856-89B3-BC9B7026D6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74A9AD16-269C-4856-89B3-BC9B7026D6FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{74FE71B3-7460-4B4A-A75E-9AA15A7FA041} = {D8695689-CDC8-4D44-82AD-CCF9B96BD827}
+		{CE6D8922-B04C-4CD3-AC15-87BD2B97E1DB} = {4F18D066-03EB-4B08-BD3B-CC675E65A974}
+		{74A9AD16-269C-4856-89B3-BC9B7026D6FE} = {4F18D066-03EB-4B08-BD3B-CC675E65A974}
+		{3D524797-2ACE-4443-AA54-C0D1A66A57C3} = {86F0F61F-E264-42CC-8F0F-CE35F37F6DAF}
+	EndGlobalSection
+EndGlobal

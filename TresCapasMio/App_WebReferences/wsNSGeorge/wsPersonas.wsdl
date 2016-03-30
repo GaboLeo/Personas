@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://jorge.org" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://jorge.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://jorge.org">
+      <s:element name="Obtener">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerResult" type="tns:ResPersona" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResPersona">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Personas" type="tns:ArrayOfEntPersona" />
+          <s:element minOccurs="1" maxOccurs="1" name="EsError" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="MensajeError" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEntPersona">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EntPersona" nillable="true" type="tns:EntPersona" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EntPersona">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Paterno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Materno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mail" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaNaci" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Estatus" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SexoId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SexoNombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sexo" type="tns:EntSexo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EntSexo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Obtener2">
+        <s:complexType />
+      </s:element>
+      <s:element name="Obtener2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Obtener2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResPersona" nillable="true" type="tns:ResPersona" />
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObtenerSoapIn">
+    <wsdl:part name="parameters" element="tns:Obtener" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Obtener2SoapIn">
+    <wsdl:part name="parameters" element="tns:Obtener2" />
+  </wsdl:message>
+  <wsdl:message name="Obtener2SoapOut">
+    <wsdl:part name="parameters" element="tns:Obtener2Response" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerHttpGetIn" />
+  <wsdl:message name="ObtenerHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResPersona" />
+  </wsdl:message>
+  <wsdl:message name="Obtener2HttpGetIn" />
+  <wsdl:message name="Obtener2HttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerHttpPostIn" />
+  <wsdl:message name="ObtenerHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResPersona" />
+  </wsdl:message>
+  <wsdl:message name="Obtener2HttpPostIn" />
+  <wsdl:message name="Obtener2HttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="wsPersonasSoap">
+    <wsdl:operation name="Obtener">
+      <wsdl:input message="tns:ObtenerSoapIn" />
+      <wsdl:output message="tns:ObtenerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener2">
+      <wsdl:input message="tns:Obtener2SoapIn" />
+      <wsdl:output message="tns:Obtener2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsPersonasHttpGet">
+    <wsdl:operation name="Obtener">
+      <wsdl:input message="tns:ObtenerHttpGetIn" />
+      <wsdl:output message="tns:ObtenerHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener2">
+      <wsdl:input message="tns:Obtener2HttpGetIn" />
+      <wsdl:output message="tns:Obtener2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsPersonasHttpPost">
+    <wsdl:operation name="Obtener">
+      <wsdl:input message="tns:ObtenerHttpPostIn" />
+      <wsdl:output message="tns:ObtenerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener2">
+      <wsdl:input message="tns:Obtener2HttpPostIn" />
+      <wsdl:output message="tns:Obtener2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsPersonasSoap" type="tns:wsPersonasSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Obtener">
+      <soap:operation soapAction="http://jorge.org/Obtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener2">
+      <soap:operation soapAction="http://jorge.org/Obtener2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://jorge.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsPersonasSoap12" type="tns:wsPersonasSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Obtener">
+      <soap12:operation soapAction="http://jorge.org/Obtener" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener2">
+      <soap12:operation soapAction="http://jorge.org/Obtener2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://jorge.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsPersonasHttpGet" type="tns:wsPersonasHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Obtener">
+      <http:operation location="/Obtener" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener2">
+      <http:operation location="/Obtener2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsPersonasHttpPost" type="tns:wsPersonasHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Obtener">
+      <http:operation location="/Obtener" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener2">
+      <http:operation location="/Obtener2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsPersonas">
+    <wsdl:port name="wsPersonasSoap" binding="tns:wsPersonasSoap">
+      <soap:address location="http://192.168.1.68/TresCapas/wsPersonas.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsPersonasSoap12" binding="tns:wsPersonasSoap12">
+      <soap12:address location="http://192.168.1.68/TresCapas/wsPersonas.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsPersonasHttpGet" binding="tns:wsPersonasHttpGet">
+      <http:address location="http://192.168.1.68/TresCapas/wsPersonas.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsPersonasHttpPost" binding="tns:wsPersonasHttpPost">
+      <http:address location="http://192.168.1.68/TresCapas/wsPersonas.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

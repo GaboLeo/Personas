@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PaginaMaestra.master.cs"
+    Inherits="PaginaMaestra" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="row">
+        <div class="col-xs-1">
+        </div>
+        <div class="col-xs-10">
+            <div class="panel panel-default">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <h1>
+                            <asp:Label ID="lblMaster" runat="server" Text="CRUD" Style="font-size: 40px; font-weight: 500;
+                                color: #6E6E6E;"></asp:Label>&nbsp;&nbsp; <small>
+                                    <asp:Label ID="lblslogan" runat="server" Text="Create, Read, Update & Delete" Style="font-size: 30px;
+                                        font-weight: lighter; color: #848484;"></asp:Label>
+                                </small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label id="lblModal" data-toggle="modal" data-target="#myModal" class="btn btn-success">
+                                Abrir Modal</label>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-1">
+        </div>
+    </div>
+    <script src="js/jquery-2.1.4.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
