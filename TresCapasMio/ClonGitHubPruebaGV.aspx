@@ -8,7 +8,6 @@
     <link href="css/bootstrap-datepicker3.standalone.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-<div class="container">
         <div class="panel panel-primary">
             <div class="panel-heading">
             </div>
@@ -147,7 +146,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
