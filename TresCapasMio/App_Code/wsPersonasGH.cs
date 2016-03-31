@@ -19,11 +19,17 @@ public class wsPersonasGH : System.Web.Services.WebService
         //InitializeComponent(); 
     }
 
-    //voy a ocultar este metodo [WebMethod]
+    [WebMethod]
     public string HelloWorld()
     {
         return "Hola a todos";
     }
+
+
+    [WebMethod]
+    public 
+    -+
+      
 
 
 
