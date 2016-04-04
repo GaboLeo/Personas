@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.master" AutoEventWireup="true"
-    CodeFile="PruebaGV.aspx.cs" Inherits="PruebaGV" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.master" AutoEventWireup="true" CodeFile="PruebaGV.aspx.cs" Inherits="PruebaGV" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -107,8 +106,7 @@
                                     <asp:CheckBox runat="server" ID="chkEstatusEIT" Checked='<%# Bind("Estatus") %>' />
                                 </EditItemTemplate>
                                 <ItemTemplate>
-                                    <asp:CheckBox ID="chkEstatus" runat="server" Enabled="false" Checked='<%# Bind("Estatus") %>'>
-                                    </asp:CheckBox>
+                                    <asp:CheckBox ID="chkEstatus" runat="server" Enabled="false" Checked='<%# Bind("Estatus") %>'></asp:CheckBox>
                                 </ItemTemplate>
                                 <FooterTemplate>
                                     <asp:CheckBox runat="server" ID="chkEstatusFT" Checked="true" />
@@ -127,9 +125,9 @@
                                 </ItemTemplate>
                                 <FooterTemplate>
                                     <div style="text-align: center;">
-                                        <asp:Button Text="Agregar" runat="server" ID="btnAgregarFT" 
-                                            CssClass="btn btn-primary btn-sm" onclick="btnAgregarFT_Click" />
-                                        </div>
+                                        <asp:Button Text="Agregar" runat="server" ID="btnAgregarFT"
+                                            CssClass="btn btn-primary btn-sm" OnClick="btnAgregarFT_Click" />
+                                    </div>
                                 </FooterTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="ELIMINAR" ShowHeader="False">
